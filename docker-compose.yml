@@ -1,0 +1,33 @@
+version: "3"
+
+services:
+  heimdall:
+      image: lscr.io/linuxserver/heimdall:latest
+      container_name: heimdall3
+      environment:
+        - PUID=1000
+        - PGID=1000
+        - TZ=Europe/London
+      volumes:
+        - ./heimdall:/config
+      restart: unless-stopped
+
+  swag:
+    image: lscr.io/linuxserver/swag
+    container_name: swag3
+    cap_add:
+      - NET_ADMIN
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/London
+      - URL=ynov.duckdns.org
+      - SUBDOMAINS=wildcard
+      - VALIDATION=duckdns
+      - DUCKDNSTOKEN=fbd2eb3e-3405-49a9-b92f-5c6df99e1ed9
+    volumes:
+      - ./swag:/config
+    ports:
+      - 443:443
+      - 80:80
+    restart: unless-stopped
