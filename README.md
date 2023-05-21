@@ -6,4 +6,12 @@
 
 - heimdall
 - un projet perso vue.js 
-
+- wordpress
+- mariadb
+- phpmyadmin
+- mysql
+- pgadmin
+- plik
+- portainer
+- gitea
+- postgres

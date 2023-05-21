@@ -12,6 +12,99 @@ services:
         - ./heimdall:/config
       restart: unless-stopped
 
+  wordpress:
+    image: wordpress:latest
+    restart: unless-stopped
+    environment:
+      - WORDPRESS_DB_HOST=mariadb
+      - WORDPRESS_DB_USER=admin
+      - WORDPRESS_DB_PASSWORD=admin
+      - WORDPRESS_DB_NAME=wp
+
+  mariadb:
+    image: mariadb
+    container_name: mariadb
+    restart: unless-stopped
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - TZ=Europe/London
+      - MYSQL_DATABASE=mariadb
+      - MYSQL_USER=admin
+      - MYSQL_PASSWORD=admin
+    volumes:
+      - ./init:/docker-entrypoint-initdb.d
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: pma
+    depends_on:
+      - mysql
+      - mariadb
+    links:
+      - mysql
+      - mariadb
+    environment:
+      PMA_HOSTS: mysql,mariadb
+      PMA_ARBITRARY: 2
+    restart: unless-stopped
+
+  mysql:
+    image: mysql:5.7
+    container_name: db
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - MYSQL_ROOT_PASSWORD=root
+      - TZ=Europe/London
+      - MYSQL_DATABASE=mysqldb
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=root
+    ports:
+      - "3306:3306"
+
+  pgadmin:
+    container_name: pgadmin4
+    image: dpage/pgadmin4
+    restart: unless-stopped
+    environment:
+      PGADMIN_DEFAULT_EMAIL: root@admin.com
+      PGADMIN_DEFAULT_PASSWORD: root
+
+  plik:
+    image: rootgg/plik:latest
+    container_name: plik
+    restart: unless-stopped
+
+  portainer:
+    image: portainer/portainer-ce:latest
+    container_name: portainer
+    restart: unless-stopped
+    security_opt:
+      - no-new-privileges:true
+
+  gitea:
+    image: gitea/gitea:1.17.1
+    container_name: gitea_bis
+    environment:
+      - USER_UID=1000
+      - USER_GID=1000
+      - GITEA__database__DB_TYPE=postgres
+      - GITEA__database__HOST=db:5432
+      - GITEA__database__NAME=gitea
+      - GITEA__database__USER=gitea
+      - GITEA__database__PASSWD=gitea
+    restart: unless-stopped
+    depends_on:
+      - postgres
+
+  postgres:
+    image: postgres:14
+    restart: unless-stopped
+    environment:
+      - POSTGRES_USER=gitea
+      - POSTGRES_PASSWORD=gitea
+      - POSTGRES_DB=gitea
+
   swag:
     image: lscr.io/linuxserver/swag
     container_name: swag3
