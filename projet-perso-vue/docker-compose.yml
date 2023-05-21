@@ -1,0 +1,16 @@
+version: '3'
+services:
+  node:
+    tty: true
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: projet-perso-vue
+    container_name: docker-projet
+    restart: unless-stopped
+    command: npm run serve
+    ports:
+    - '8080:8080'
+    volumes:
+      - ./:/app/
+      - /app/node_modules

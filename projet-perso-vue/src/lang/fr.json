@@ -1,0 +1,137 @@
+{
+  "global": {
+    "appName": "Corppooling"
+  },
+  "auth": {
+    "login": "Connexion",
+    "password": "Mot de passe",
+    "loggingIn": "Se connecter",
+    "register": "Inscription",
+    "registerMyCompany": "Je souhaite inscrire mon entreprise",
+    "recontactDesc": "Vous êtes une entreprise ? Transmettez-nous votre email, nous vous recontacterons dans les plus brefs délais pour vous accompagner dans la création de votre espace Corppooling.",
+    "recontact": "Je souhaite être recontacté",
+    "toLogin": "J'ai déjà un compte",
+    "logout": "Déconnexion",
+    "badCredentials": "Identifiants incorrects"
+  },
+  "header": {
+    "newTrip": "Nouveau trajet",
+    "search": "Rechercher",
+    "whereDoYouGo": "Où souhaitez-vous aller ?",
+    "notifications": "Notifications",
+    "account": "Mon compte"
+  },
+  "footer": {
+    "privacy": "Politique de confidentialité",
+    "terms": "Conditions générales d'utilisation"
+  },
+  "home": {
+    "find": "Trouvez votre trajet",
+    "popularTrips": "Trajets à la une !",
+    "howTo": "Comment ça marche ?",
+    "welcome": "Bienvenue sur Corppooling",
+    "description": "L'application de covoiturage dédiée aux entreprises",
+    "seeAll": "Voir tous les trajets",
+    "tutorial": {
+      "searchPassenger": "Partagez l'endroit où vous voulez aller. Peut-être que quelqu'un souhaite y aller aussi !",
+      "searchDriver": "Inscrivez votre trajet sur l'application pour permettre à vos collègues de partir avec vous.",
+      "talkPassenger": "Échangez avec le conducteur pour convenir d'un prix et d'un lieu qui vous arrange.",
+      "talkDriver": "Discuter avec le passager pour convenir du prix et du lieu de rendez-vous.",
+      "carPassenger": "En route ! Vous pouvez maintenant profiter de votre trajet.",
+      "carDriver": "Super ! Vous voyagez à moindre coût, et vous pouvez faire des rencontres."
+    }
+  },
+  "trip": {
+    "title": "Trajets",
+    "searchPassengers": "Je recherche des passagers",
+    "searchDriver": "Je recherche un conducteur",
+    "passenger": "1 passager | {count} passagers",
+    "join": "Rejoindre",
+    "noTrips": "Aucun trajet ne correspond à votre recherche",
+    "noTripsNow": "Il n'y a aucun trajet disponible actuellement",
+    "filter": {
+      "departure": "Départ",
+      "arrival": "Arrivée",
+      "departureTime": "Toutes les dates",
+      "filterBy": "Filtrer par",
+      "reset": "Tri réinitialisé",
+      "departureTimeASC": "Départ le plus tôt",
+      "departureTimeDESC": "Départ le plus tard",
+      "priceASC": "Prix le plus bas",
+      "iAm": "Je suis",
+      "driver": "Conducteur",
+      "passenger": "Passager"
+    },
+    "price": "Prix indicatif pour 1 passager",
+    "contact": "Contacter {name}",
+    "availableSeats": "1 place disponible | {count} places disponibles",
+    "joinThisTrip": "Rejoindre ce trajet",
+    "confirmBooking": "Je confirme ma réservation",
+    "bookingRegistered": "Réservation enregistrée",
+    "othersPassengers": "Autres passagers",
+    "othersInterested": "Autres personnes intéressés",
+    "noPassengers": "Aucun collaborateur n'a encore rejoint ce trajet",
+    "addTrip": {
+      "fillFields": "Veuillez remplir tous les champs",
+      "publish": "Publier",
+      "next": "Suivant",
+      "success": "Votre trajet a bien été publié",
+      "newTrip": "Nouveau trajet",
+      "step1": "Êtes-vous vous conducteur ou passager ?",
+      "step2": "D’où partez-vous ?",
+      "step3": "Où allez-vous ?",
+      "step4": "Quand partez-vous ?",
+      "step5": "Un message à transmettre ?",
+      "message": "Votre message",
+      "step6": "Combien y a-t-il de places dans la voiture ?",
+      "step7": "Quel est le modèle de votre véhicule ?",
+      "carModel": "Votre modèle de voiture",
+      "step8": "Quelle est la couleur de votre véhicule ?",
+      "carColor": "Votre couleur de voiture",
+      "step9": "Quel tarif souhaitez-vous mettre ?",
+      "price": "Prix indicatif pour 1 passager"
+    }
+  },
+  "contact": {
+    "yourMessage": "Votre message",
+    "send": "Envoyer"
+  },
+  "toast": {
+    "info": "Info",
+    "success": "Succès",
+    "warning": "Attention",
+    "error": "Une erreur s'est produite",
+    "errorBody": "Veuillez réessayer"
+  },
+  "form": {
+    "empties": "Veuillez remplir tous les champs"
+  },
+  "action": {
+    "delete": "Suppression",
+    "confirm": "Confirmation",
+    "yes": "Oui",
+    "no": "Non"
+  },
+  "account": {
+    "profile": "Mon profil",
+    "trips": "Mes trajets",
+    "bookings": "Mes réservations",
+    "company": "Mon entreprise",
+    "myTrips": {
+      "deleteConfirm": "Êtes-vous sûr de vouloir supprimer ce trajet ?",
+      "deleteSuccess": "Le trajet a bien été supprimé",
+      "upcoming": "Trajets à venir",
+      "noUpcoming": "Vous n'avez pas encore de trajets à venir",
+      "archived": "Trajets archivés",
+      "noArchived": "Vous n'avez aucun trajet archivé"
+    },
+    "myBookings": {
+      "deleteConfirm": "Êtes-vous sûr de vouloir supprimer cette réservation ?",
+      "deleteSuccess": "La réservation a bien été supprimée",
+      "upcoming": "Trajets réservés à venir",
+      "noUpcoming": "Aucun trajet réservé pour le moment",
+      "archived": "Trajets réservés archivés",
+      "noArchived": "Vous n'avez encore aucun trajet réservé archivé"
+    }
+  }
+}
